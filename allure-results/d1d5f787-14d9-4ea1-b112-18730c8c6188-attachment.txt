@@ -1,0 +1,41 @@
+POST API Response:  {
+  "bookingid": 25055,
+  "booking": {
+    "firstname": "Jaswanth",
+    "lastname": "Alapati",
+    "totalprice": 1000,
+    "depositpaid": true,
+    "bookingdates": {
+      "checkin": "2026-05-26",
+      "checkout": "2026-05-27"
+    },
+    "additionalneeds": "super bowls"
+  }
+}
+Booking Id is : 25055
+Get api response :  {
+  "firstname": "Jaswanth",
+  "lastname": "Alapati",
+  "totalprice": 1000,
+  "depositpaid": true,
+  "bookingdates": {
+    "checkin": "2026-05-26",
+    "checkout": "2026-05-27"
+  },
+  "additionalneeds": "super bowls"
+}
+token api response in json is :  {
+  "token": "1f2943ca8e49a69"
+}
+token is: 1f2943ca8e49a69
+put api response is : {
+  "firstname": "Specflow",
+  "lastname": "Selenium C#",
+  "totalprice": 9999,
+  "depositpaid": true,
+  "bookingdates": {
+    "checkin": "2026-05-26",
+    "checkout": "2019-05-08"
+  },
+  "additionalneeds": "super bowls put"
+}

@@ -1,0 +1,42 @@
+POST API Response:  {
+  "bookingid": 3602,
+  "booking": {
+    "firstname": "Jaswanth",
+    "lastname": "Alapati",
+    "totalprice": 1000,
+    "depositpaid": true,
+    "bookingdates": {
+      "checkin": "2026-05-26",
+      "checkout": "2026-05-27"
+    },
+    "additionalneeds": "super bowls"
+  }
+}
+Booking Id is : 3602
+Get api response :  {
+  "firstname": "Jaswanth",
+  "lastname": "Alapati",
+  "totalprice": 1000,
+  "depositpaid": true,
+  "bookingdates": {
+    "checkin": "2026-05-26",
+    "checkout": "2026-05-27"
+  },
+  "additionalneeds": "super bowls"
+}
+token api response in json is :  {
+  "token": "9c40f4ec1b06ba8"
+}
+token is: 9c40f4ec1b06ba8
+patch api response is : {
+  "firstname": "Typescript",
+  "lastname": "Alapati",
+  "totalprice": 1000,
+  "depositpaid": true,
+  "bookingdates": {
+    "checkin": "2026-05-26",
+    "checkout": "2026-05-27"
+  },
+  "additionalneeds": "super bowls"
+}
+delete api response body :  Promise { <pending> }

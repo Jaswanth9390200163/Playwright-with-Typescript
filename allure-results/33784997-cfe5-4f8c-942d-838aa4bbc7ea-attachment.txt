@@ -1,0 +1,15 @@
+POST API Response:  {
+  "bookingid": 1211,
+  "booking": {
+    "firstname": "Jaswanth",
+    "lastname": "Alapati",
+    "totalprice": 1000,
+    "depositpaid": true,
+    "bookingdates": {
+      "checkin": "2026-05-26",
+      "checkout": "2026-05-27"
+    },
+    "additionalneeds": "super bowls"
+  }
+}
+Booking Id is : 1211

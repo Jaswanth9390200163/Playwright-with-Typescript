@@ -1,0 +1,369 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: filedownload.spec.ts >> file download
+- Location: tests\filedownload.spec.ts:5:5
+
+# Error details
+
+```
+Test timeout of 30000ms exceeded.
+```
+
+```
+Error: page.waitForEvent: Test timeout of 30000ms exceeded.
+=========================== logs ===========================
+waiting for event "download"
+============================================================
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - link "Logout" [ref=e2] [cursor=pointer]:
+    - /url: "#"
+  - text:    
+  - generic [ref=e3]:
+    - generic [ref=e4]: Welcome to Testers Talk!
+    - generic [ref=e5]:
+      - generic [ref=e6]:
+        - button "Practice Page" [ref=e7] [cursor=pointer]
+        - button "Playwright TypeScript Course" [ref=e8] [cursor=pointer]
+        - button "Playwright JavaScript Course" [ref=e9] [cursor=pointer]
+        - button "Cypress Course" [ref=e10] [cursor=pointer]
+        - button "JavaScript Course" [ref=e11] [cursor=pointer]
+        - button "Postman Course" [ref=e12] [cursor=pointer]
+        - button "Rest Assured Course" [ref=e13] [cursor=pointer]
+      - generic [ref=e14]:
+        - generic [ref=e15]:
+          - generic [ref=e16]:
+            - generic [ref=e17]: "Name: *"
+            - 'textbox "Name: *" [ref=e18]':
+              - /placeholder: Employee Name
+          - generic [ref=e19]:
+            - generic [ref=e20]: "Department: *"
+            - 'textbox "Department: *" [ref=e21]':
+              - /placeholder: Department
+          - generic [ref=e22]:
+            - generic [ref=e23]: "Date of Birth: *"
+            - 'textbox "Date of Birth: *" [ref=e24]'
+          - generic [ref=e25]:
+            - generic [ref=e26]: "Gender: *"
+            - 'combobox "Gender: *" [ref=e27]':
+              - option "Male" [selected]
+              - option "Female"
+        - generic [ref=e28]:
+          - generic [ref=e29]:
+            - generic [ref=e30]:
+              - generic [ref=e31]: "Checkboxes:"
+              - generic [ref=e32]:
+                - generic [ref=e33] [cursor=pointer]:
+                  - checkbox "Playwright" [ref=e34]
+                  - text: Playwright
+                - generic [ref=e35] [cursor=pointer]:
+                  - checkbox "Cypress" [ref=e36]
+                  - text: Cypress
+                - generic [ref=e37] [cursor=pointer]:
+                  - checkbox "Selenium" [ref=e38]
+                  - text: Selenium
+                - generic [ref=e39] [cursor=pointer]:
+                  - checkbox "JavaScript" [ref=e40]
+                  - text: JavaScript
+                - generic [ref=e41] [cursor=pointer]:
+                  - checkbox "Postman" [ref=e42]
+                  - text: Postman
+                - generic [ref=e43] [cursor=pointer]:
+                  - checkbox "Rest Assured" [ref=e44]
+                  - text: Rest Assured
+                - generic [ref=e45] [cursor=pointer]:
+                  - checkbox "API Testing" [ref=e46]
+                  - text: API Testing
+            - generic [ref=e47]:
+              - generic [ref=e48]: "Radio Buttons:"
+              - generic [ref=e49]:
+                - generic [ref=e50] [cursor=pointer]:
+                  - radio "India" [checked] [ref=e51]
+                  - text: India
+                - generic [ref=e52] [cursor=pointer]:
+                  - radio "United States" [ref=e53]
+                  - text: United States
+                - generic [ref=e54] [cursor=pointer]:
+                  - radio "Japan" [ref=e55]
+                  - text: Japan
+                - generic [ref=e56] [cursor=pointer]:
+                  - radio "Russia" [ref=e57]
+                  - text: Russia
+            - generic [ref=e58]:
+              - generic [ref=e59]: "Links:"
+              - generic [ref=e60]:
+                - link " Visit Testers Talk YouTube Channel" [ref=e61] [cursor=pointer]:
+                  - /url: https://www.youtube.com/@testerstalk
+                  - generic [ref=e62]: 
+                  - text: Visit Testers Talk YouTube Channel
+                - link " Join LinkedIn Group" [ref=e63] [cursor=pointer]:
+                  - /url: https://www.linkedin.com/groups/10393547/
+                  - generic [ref=e64]: 
+                  - text: Join LinkedIn Group
+                - link " Join Facebook Group" [ref=e65] [cursor=pointer]:
+                  - /url: https://www.facebook.com/groups/247868358996762
+                  - generic [ref=e66]: 
+                  - text: Join Facebook Group
+                - link " Connect on LinkedIn" [ref=e67] [cursor=pointer]:
+                  - /url: https://www.linkedin.com/in/bakkappa-n
+                  - generic [ref=e68]: 
+                  - text: Connect on LinkedIn
+            - generic [ref=e69]:
+              - generic [ref=e70]: "Alerts Popups:"
+              - generic [ref=e71]:
+                - button "Simple" [ref=e72] [cursor=pointer]
+                - button "Confirm" [ref=e73] [cursor=pointer]
+                - button "Prompt" [ref=e74] [cursor=pointer]
+            - generic [ref=e75]:
+              - generic [ref=e76]: "Iframe:"
+              - iframe [ref=e78]:
+                - generic [ref=f2e2]:
+                  - button "Playwright TypeScript Full Course" [ref=f2e3] [cursor=pointer]
+                  - button "Playwright JavaScript Full Course" [ref=f2e4] [cursor=pointer]
+                  - button "Cypress Full Course" [ref=f2e5] [cursor=pointer]
+                  - button "JavaScript For Beginners" [ref=f2e6] [cursor=pointer]
+                  - button "API Testing Full Course" [ref=f2e7] [cursor=pointer]
+          - generic [ref=e79]:
+            - generic [ref=e80]:
+              - generic [ref=e81]: "Upload & Download File:"
+              - generic [ref=e82]: "Select file:"
+              - button "Select file:" [ref=e83]
+              - paragraph [ref=e84]: No file selected
+            - generic [ref=e85]:
+              - generic [ref=e86]: "Downloads:"
+              - generic [ref=e87]:
+                - link "Download Excel" [ref=e88] [cursor=pointer]:
+                  - /url: Downloads/TestersTalk_Excel.xlsx
+                - link "Download Word" [ref=e89] [cursor=pointer]:
+                  - /url: Downloads/TestersTalk_WordDoc.docx
+                - link "Download XML" [ref=e90] [cursor=pointer]:
+                  - /url: Downloads/TestersTalk_XML.xml
+                - link "Download PDF" [ref=e91] [cursor=pointer]:
+                  - /url: Downloads/TestersTalk_PDF.pdf
+            - generic [ref=e92]:
+              - generic [ref=e93]: "Drag and Drop:"
+              - generic [ref=e94]:
+                - generic [ref=e95]: Drag me
+                - generic [ref=e96]: Drop here
+            - generic [ref=e97]:
+              - generic [ref=e98]: "Mouse Hover:"
+              - link "Hover this link" [ref=e100] [cursor=pointer]:
+                - /url: "#"
+            - generic [ref=e101]:
+              - generic [ref=e102]: "Auto Suggestions:"
+              - textbox "Search courses..." [ref=e104]
+        - button "Save" [ref=e106] [cursor=pointer]
+        - generic [ref=e107]:
+          - heading "Latest 10 Records" [level=3] [ref=e108]
+          - button "Clear All Rows" [ref=e109] [cursor=pointer]
+        - table [ref=e110]:
+          - rowgroup [ref=e111]:
+            - row "Name Department DOB Gender Technologies Country" [ref=e112]:
+              - columnheader "Name" [ref=e113]
+              - columnheader "Department" [ref=e114]
+              - columnheader "DOB" [ref=e115]
+              - columnheader "Gender" [ref=e116]
+              - columnheader "Technologies" [ref=e117]
+              - columnheader "Country" [ref=e118]
+          - rowgroup
+    - generic [ref=e119]:
+      - heading "Scrolling - Horizontal & Vertical" [level=2] [ref=e120]
+      - table [ref=e121]:
+        - rowgroup [ref=e122]:
+          - row "Course Title Preview Watch on YouTube" [ref=e123]:
+            - columnheader "Course Title" [ref=e124]
+            - columnheader "Preview" [ref=e125]
+            - columnheader "Watch on YouTube" [ref=e126]
+        - rowgroup [ref=e127]:
+          - row "Playwright TypeScript Course Playwright TypeScript Course Watch" [ref=e128]:
+            - cell "Playwright TypeScript Course" [ref=e129]
+            - cell "Playwright TypeScript Course" [ref=e130]:
+              - iframe [ref=e131]:
+                - generic "YouTube Video Player" [ref=f9e3]:
+                  - generic [ref=f9e6]:
+                    - generic:
+                      - generic:
+                        - generic [ref=f9e7] [cursor=pointer]: "\"Engineering Impact\""
+                        - link "jobs.johnsoncontrols.com This link opens in new tab" [ref=f9e8] [cursor=pointer]:
+                          - generic [ref=f9e9]: jobs.johnsoncontrols.com
+                      - generic [ref=f9e10]:
+                        - generic [ref=f9e12]: Sponsored 1 of 2 ·
+                        - generic [ref=f9e14]: 0:51
+                        - button "My Ad Center" [ref=f9e16] [cursor=pointer]:
+                          - generic [ref=f9e17]:
+                            - img
+                      - button "Skip" [ref=f9e19] [cursor=pointer]:
+                        - generic [ref=f9e20]: Skip
+                        - generic [ref=f9e21]:
+                          - img
+            - cell "Watch" [ref=e132]:
+              - link "Watch":
+                - /url: https://youtu.be/788GvvcfwTY?feature=shared
+          - row "Playwright JavaScript Course Playwright JavaScript Course Watch" [ref=e133]:
+            - cell "Playwright JavaScript Course" [ref=e134]
+            - cell "Playwright JavaScript Course" [ref=e135]:
+              - iframe [ref=e136]:
+                - generic "YouTube Video Player" [ref=f10e3]:
+                  - generic [ref=f10e6]:
+                    - generic:
+                      - generic:
+                        - generic [ref=f10e7] [cursor=pointer]: "\"Engineering Impact\""
+                        - link "jobs.johnsoncontrols.com This link opens in new tab" [ref=f10e8] [cursor=pointer]:
+                          - generic [ref=f10e9]: jobs.johnsoncontrols.com
+                      - generic [ref=f10e10]:
+                        - generic [ref=f10e12]: Sponsored 1 of 2 ·
+                        - generic [ref=f10e14]: 0:51
+                        - button "My Ad Center" [ref=f10e16] [cursor=pointer]:
+                          - generic [ref=f10e17]:
+                            - img
+                      - button "Skip" [ref=f10e19] [cursor=pointer]:
+                        - generic [ref=f10e20]: Skip
+                        - generic [ref=f10e21]:
+                          - img
+            - cell "Watch" [ref=e137]:
+              - link "Watch":
+                - /url: https://youtu.be/2poXBtifpzA?feature=shared
+          - row "Cypress Course Cypress Course Watch" [ref=e138]:
+            - cell "Cypress Course" [ref=e139]
+            - cell "Cypress Course" [ref=e140]:
+              - iframe [ref=e141]:
+                - generic [active] [ref=f11e1]:
+                  - generic "YouTube Video Player" [ref=f11e3]
+                  - generic [ref=f11e6]:
+                    - generic:
+                      - generic:
+                        - button "Show player controls" [ref=f11e7] [cursor=pointer]
+                        - generic [ref=f11e12]:
+                          - generic: Testers Talk
+                          - generic: 29.9K subscribers
+            - cell "Watch" [ref=e142]:
+              - link "Watch":
+                - /url: https://youtu.be/oJV5whmzfZI?feature=shared
+          - row "JavaScript For Beginners JavaScript For Beginners Watch" [ref=e143]:
+            - cell "JavaScript For Beginners" [ref=e144]
+            - cell "JavaScript For Beginners" [ref=e145]:
+              - iframe [ref=e146]:
+                - generic [active] [ref=f12e1]:
+                  - generic "YouTube Video Player" [ref=f12e3]
+                  - generic [ref=f12e6]:
+                    - generic:
+                      - generic:
+                        - button "Show player controls" [ref=f12e7] [cursor=pointer]
+                        - generic [ref=f12e12]:
+                          - generic: Testers Talk
+                          - generic: 29.9K subscribers
+            - cell "Watch" [ref=e147]:
+              - link "Watch":
+                - /url: https://youtu.be/ACUMZ3OkExQ?feature=shared
+          - row "Postman Course Postman Course Watch" [ref=e148]:
+            - cell "Postman Course" [ref=e149]
+            - cell "Postman Course" [ref=e150]:
+              - iframe [ref=e151]:
+                - generic [active] [ref=f13e1]:
+                  - generic "YouTube Video Player" [ref=f13e3]
+                  - generic [ref=f13e6]:
+                    - generic:
+                      - generic:
+                        - button "Show player controls" [ref=f13e7] [cursor=pointer]
+                        - generic [ref=f13e12]:
+                          - generic: Testers Talk
+                          - generic: 29.9K subscribers
+            - cell "Watch" [ref=e152]:
+              - link "Watch":
+                - /url: https://youtu.be/QKBa8lt5Wfo?feature=shared
+          - row "Rest Assured Course Rest Assured Course Watch" [ref=e153]:
+            - cell "Rest Assured Course" [ref=e154]
+            - cell "Rest Assured Course" [ref=e155]:
+              - iframe [ref=e156]:
+                - generic [active] [ref=f14e1]:
+                  - generic "YouTube Video Player" [ref=f14e3]
+                  - generic [ref=f14e6]:
+                    - generic:
+                      - generic:
+                        - button "Show player controls" [ref=f14e7] [cursor=pointer]
+                        - generic [ref=f14e12]:
+                          - generic: Testers Talk
+                          - generic: 29.9K subscribers
+            - cell "Watch" [ref=e157]:
+              - link "Watch":
+                - /url: https://youtu.be/o9KJhGHl49M?feature=shared
+          - row "Specflow with Selenium Course Specflow with Selenium Course Watch" [ref=e158]:
+            - cell "Specflow with Selenium Course" [ref=e159]
+            - cell "Specflow with Selenium Course" [ref=e160]:
+              - iframe [ref=e161]:
+                - generic [active] [ref=f15e1]:
+                  - generic "YouTube Video Player" [ref=f15e3]
+                  - generic [ref=f15e6]:
+                    - generic:
+                      - generic:
+                        - button "Show player controls" [ref=f15e7] [cursor=pointer]
+                        - generic [ref=f15e12]:
+                          - generic: Testers Talk
+                          - generic: 29.9K subscribers
+            - cell "Watch" [ref=e162]:
+              - link "Watch":
+                - /url: https://youtu.be/7xPcalwU76c?feature=shared
+  - generic [ref=e163]:
+    - link "Donate Now" [ref=e164] [cursor=pointer]:
+      - /url: Donate-Now.html
+    - text: "|"
+    - link "Test API's" [ref=e165] [cursor=pointer]:
+      - /url: API-Test-Playground.html
+    - text: "|"
+    - link "Medium Articles" [ref=e166] [cursor=pointer]:
+      - /url: Testers-Talk-Medium-Articles.html
+```
+
+# Test source
+
+```ts
+  1  | import { expect, test, Locator } from "@playwright/test";
+  2  | import path from "node:path";
+  3  | 
+  4  | 
+  5  | test("file download", async({page})=> {
+  6  | 
+  7  | 
+  8  |     await page.goto("https://bakkappan.github.io/Testers-Talk-Practice-Site");
+  9  | 
+  10 |     await page.locator('#chatbotCloseBtn').click();
+  11 | 
+  12 |     await page.getByPlaceholder('Username').fill('TestersTalk');
+  13 | 
+  14 |     await page.getByPlaceholder('Password').fill('TestersTalk');
+  15 | 
+  16 |     await page.getByRole('button', {name : 'Login'}).click();
+  17 | 
+  18 |     await page.waitForTimeout(3000);
+  19 | 
+  20 | 
+  21 |     const[download] = await Promise.all([
+  22 | 
+> 23 |         await page.waitForEvent('download'),
+     |                    ^ Error: page.waitForEvent: Test timeout of 30000ms exceeded.
+  24 |         await page.getByRole('link', {name : 'Download Excel' }).click()
+  25 | 
+  26 |     ])
+  27 | 
+  28 |     page.waitForTimeout(3000);
+  29 | 
+  30 | 
+  31 |     console.log("downloaded file name is ", +download.suggestedFilename());
+  32 | 
+  33 |     await expect(download.suggestedFilename()).toBe('TestesTalk.xlsx');
+  34 | 
+  35 |     await download.saveAs("./downloads/Jaswanth.xlsx");
+  36 |     
+  37 |     await page.waitForTimeout(3000);
+  38 | })
+```

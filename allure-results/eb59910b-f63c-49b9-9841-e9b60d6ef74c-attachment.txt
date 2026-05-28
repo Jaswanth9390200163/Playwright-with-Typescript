@@ -1,0 +1,41 @@
+POST API Response:  {
+  "bookingid": 3021,
+  "booking": {
+    "firstname": "Jaswanth",
+    "lastname": "Alapati",
+    "totalprice": 1000,
+    "depositpaid": true,
+    "bookingdates": {
+      "checkin": "2026-05-26",
+      "checkout": "2026-05-27"
+    },
+    "additionalneeds": "super bowls"
+  }
+}
+Booking Id is : 3021
+Get api response :  {
+  "firstname": "Jaswanth",
+  "lastname": "Alapati",
+  "totalprice": 1000,
+  "depositpaid": true,
+  "bookingdates": {
+    "checkin": "2026-05-26",
+    "checkout": "2026-05-27"
+  },
+  "additionalneeds": "super bowls"
+}
+token api response in json is :  {
+  "token": "6a30267eda41dce"
+}
+token is: 6a30267eda41dce
+patch api response is : {
+  "firstname": "Typescript",
+  "lastname": "Alapati",
+  "totalprice": 1000,
+  "depositpaid": true,
+  "bookingdates": {
+    "checkin": "2026-05-26",
+    "checkout": "2026-05-27"
+  },
+  "additionalneeds": "super bowls"
+}

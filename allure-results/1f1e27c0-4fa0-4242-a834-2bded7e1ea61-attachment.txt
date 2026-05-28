@@ -1,0 +1,14 @@
+number of computer products in the page are :  4
+First text content  Build your own cheap computer
+Last text content  Simple Computer
+nth text content  Build your own expensive computer
+product Build your own cheap computer
+product Build your own computer
+product Build your own expensive computer
+product Simple Computer
+last titem text is :  Google+
+
+    Alfreds Futterkiste
+    Maria Anders
+    Germany
+  

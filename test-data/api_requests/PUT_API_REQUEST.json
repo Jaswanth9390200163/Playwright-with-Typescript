@@ -1,0 +1,11 @@
+{
+    "firstname": "Specflow",
+    "lastname": "Selenium C#",
+    "totalprice": 9999,
+    "depositpaid": true,
+    "bookingdates": {
+        "checkin": "2026-05-26",
+        "checkout": "2019-05-08"
+    },
+    "additionalneeds": "super bowls put"
+}

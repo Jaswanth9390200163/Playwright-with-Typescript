@@ -1,0 +1,130 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: api\delete_api_request.spec.ts >> PATCH api request
+- Location: tests\api\delete_api_request.spec.ts:17:5
+
+# Error details
+
+```
+Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: "Created"
+Received: [Function statusText]
+```
+
+# Test source
+
+```ts
+  22  | 
+  23  |     console.log("POST API Response: ", JSON.stringify(jsonPostAPIResponse, null, 2));
+  24  | 
+  25  |     expect(postAPIResponse.status()).toBe(200);
+  26  |     expect(postAPIResponse.statusText()).toBe('OK');
+  27  |     expect(postAPIResponse.headers()['content-type']).toContain('application/json');
+  28  | 
+  29  | 
+  30  |     //validate property/key names
+  31  |     expect(jsonPostAPIResponse.booking).toHaveProperty('firstname');        
+  32  | 
+  33  |     expect(jsonPostAPIResponse.booking).toHaveProperty('lastname');
+  34  | 
+  35  |     expect(jsonPostAPIResponse.booking.bookingdates).toHaveProperty('checkin');
+  36  | 
+  37  |     expect(jsonPostAPIResponse.booking.bookingdates).toHaveProperty('checkout');
+  38  | 
+  39  | 
+  40  |     //validate response data
+  41  |     expect(jsonPostAPIResponse.bookingid).toBeGreaterThan(0);
+  42  | 
+  43  |     expect(jsonPostAPIResponse.booking.firstname).toBe('Jaswanth');
+  44  | 
+  45  |     expect(jsonPostAPIResponse.booking.lastname).toBe('Alapati');
+  46  | 
+  47  | 
+  48  |     //validate data  for nested json fields
+  49  | 
+  50  |     expect(jsonPostAPIResponse.booking.bookingdates.checkin).toBe('2026-05-26');
+  51  | 
+  52  |     expect(jsonPostAPIResponse.booking.bookingdates.checkout).toBe('2026-05-27');
+  53  | 
+  54  | 
+  55  |     //GET API Request -- using query parameters
+  56  |     const bookingid = jsonPostAPIResponse.bookingid;
+  57  |     console.log("Booking Id is :", bookingid);
+  58  | 
+  59  | 
+  60  |     const getAPIResponse = await request.get(`/booking/${bookingid}`);
+  61  | 
+  62  |     expect(getAPIResponse.status()).toBe(200);
+  63  | 
+  64  |     expect(getAPIResponse.statusText()).toBe('OK');
+  65  | 
+  66  |     const getAPIResponseJson = await getAPIResponse.json();
+  67  | 
+  68  |     console.log('Get api response : ', JSON.stringify(getAPIResponseJson, null, 2));
+  69  | 
+  70  |     //Generate Token
+  71  |     const tokenAPIResponse = await request.post(`/auth`, {data : tokenAPIRequest});
+  72  | 
+  73  |     expect(tokenAPIResponse.status()).toBe(200);
+  74  | 
+  75  |     expect(tokenAPIResponse.statusText()).toBe('OK');
+  76  | 
+  77  |     const tokenAPIResponseJSON = await tokenAPIResponse.json();
+  78  | 
+  79  |     console.log("token api response in json is : ",JSON.stringify(tokenAPIResponseJSON, null, 2));
+  80  | 
+  81  |     const token = tokenAPIResponseJSON.token;
+  82  |     console.log("token is:", token)
+  83  | 
+  84  | 
+  85  |     //PATCH api request which requires this token
+  86  | 
+  87  |     const patchAPIResponse = await request.patch(`/booking/${bookingid}`, {
+  88  |         headers : {
+  89  |             "Content-Type": "application/json",
+  90  |             "Cookie": `token=${token}`
+  91  | 
+  92  |         },
+  93  | 
+  94  |         data : patchAPIRequest,
+  95  |     });
+  96  | 
+  97  | 
+  98  |     await expect(patchAPIResponse.status()).toBe(200);
+  99  | 
+  100 |     await expect(patchAPIResponse.statusText()).toBe('OK');
+  101 | 
+  102 |     const patchAPIResponseJSON = await patchAPIResponse.json();
+  103 | 
+  104 |     console.log("patch api response is :", JSON.stringify(patchAPIResponseJSON, null, 2));
+  105 | 
+  106 |     expect(patchAPIResponseJSON.firstname).toBe('Typescript');
+  107 | 
+  108 | 
+  109 |     //delete api request 
+  110 | 
+  111 |     const deleteAPIResponse = await request.delete(`/booking/${bookingid}`, 
+  112 |         {
+  113 |             headers: {
+  114 |                 "Content-Type" : "application/json",
+  115 |                 "Cookie" : `token = ${token}`
+  116 |             },
+  117 |         }
+  118 | 
+  119 |     );
+  120 | 
+  121 |     expect(deleteAPIResponse.status()).toBe(201);
+> 122 |     expect(deleteAPIResponse.statusText).toBe("Created");
+      |                                          ^ Error: expect(received).toBe(expected) // Object.is equality
+  123 | 
+  124 |     console.log("delete api response body : ", deleteAPIResponse.body());
+  125 | 
+  126 | });
+```
